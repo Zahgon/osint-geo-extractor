@@ -8,33 +8,26 @@ from .extractors import *  # noqa
 # Convenience functions:
 
 def get_bellingcat_data() -> List[Event]:
-    data: List[Any] = BellingcatDownloader().download()
-    return BellingcatExtractor().extract_events(data)
+    pass
 
 def get_ceninfores_data() -> List[Event]:
-    data: Any = CenInfoResDownloader().download()
-    return CenInfoResExtractor().extract_events(data)
+    pass
 
 def get_defmon_data(eventtype: str = 'Shellings') -> List[Event]:
-    data: Any = DefmonDownloader().download()
-    return DefmonExtractor().extract_events(data, eventtype)
+    pass
 
 def get_defmon_spreadsheet_data() -> List[Event]:
-    data: str = DefmonSpreadsheetDownloader().download()
-    return DefmonSpreadsheetExtractor()\
-        .extract_events(data)
+    pass
 
 def get_geoconfirmed_data() -> List[Event]:
-    data: str = GeoConfirmedDownloader().download()
-    return GeoConfirmedExtractor().extract_events(data)
+    pass
 
 # def get_reukraine_data() -> List[Event]:
 #     data: Any = ReukraineDownloader().download()
 #     return ReukraineExtractor().extract_events(data)
 
 def get_texty_data() -> List[Event]:
-    data: List[Any] = TextyDownloader().download()
-    return TextyExtractor().extract_events(data)
+    pass
 
 
 EXTRACTORS: dict[str, Callable] = {
